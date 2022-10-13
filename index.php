@@ -1,6 +1,34 @@
 <?php
     # Snack 1
+    $matches = [
+        [
+            'homeTeam' => 'Golden State Warriors',
+            'visitingTeam' => 'Lakers',
+            'homeTeamPoints' => 90,
+            'visitingTeamPoints' => 96
+        ],
+        [
+            'homeTeam' => 'Boston Celtics',
+            'visitingTeam' => 'Chicago Bulls',
+            'homeTeamPoints' =>  80,
+            'visitingTeamPoints' => 75
+        ],
+        [
+            'homeTeam' => 'Miami Heat',
+            'visitingTeam' => 'Houston Rockets',
+            'homeTeamPoints' =>  102,
+            'visitingTeamPoints' => 93
+        ],
+    ];
 
+    for ($i = 0; $i < 3; $i++) {
+        echo '<div class="basketMatches">'.$matches[$i]['homeTeam'] .'-'. $matches[$i]['visitingTeam'] .'|'. $matches[$i]['homeTeamPoints'].'-'.$matches[$i]['visitingTeamPoints'].'</div>';
+    }
+    
+    # ---------------------------------------
+
+    # Snack 2
+    
 ?>
 
 <!DOCTYPE html>
@@ -16,6 +44,8 @@
     <link rel="stylesheet" href="style/my_style.css">
 </head>
 <body>
-    
+    <div class="container">
+        
+    </div>
 </body>
 </html>

@@ -7,3 +7,14 @@
 body {
     font-family: 'Poppins', sans-serif;
 }
+
+.container {
+    padding: 1rem;
+}
+
+.basketMatches {
+    padding: 1rem;
+    margin: 1rem;
+    border: 1px solid black;
+    width: 25%;
+}
