@@ -8,7 +8,7 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
-.container {
+h1 {
     padding: 1rem;
 }
 
@@ -17,4 +17,22 @@ body {
     margin: 1rem;
     border: 1px solid black;
     width: 25%;
+}
+
+.access {
+    font-weight: bold;
+    padding: 1rem;
+    margin: 1rem;
+    text-transform: uppercase;
+}
+
+.info {
+    padding: 1rem;
+    margin: 1rem;
+    border: 1px solid black;
+    width: 25%;
+}
+
+.name {
+    text-transform: capitalize;
 }
