@@ -104,15 +104,16 @@ if ((filter_var($mail, FILTER_VALIDATE_EMAIL)) && (strlen($name) > 3) && (is_num
             ]
         ],
     ];
+    
     foreach($posts as $key => $value) {
         ?>
-            <div><?=$key ?></div>
+            <div class="date"><?=$key.':' ?></div>
         <?php
         foreach($value as $post => $valueKey) {
             ?>
-            <div><?=$valueKey["title"] ?></div>
-            <div><?=$valueKey["author"] ?></div>
-            <div><?=$valueKey["text"] ?></div>
+            <div class="post title"><?=$valueKey["title"] ?></div>
+            <div class="post"><?=$valueKey["author"] ?></div>
+            <div class="post"><?=$valueKey["text"] ?></div>
         <?php
         }
         
@@ -121,6 +122,21 @@ if ((filter_var($mail, FILTER_VALIDATE_EMAIL)) && (strlen($name) > 3) && (is_num
 <hr>
 <?php
     # Snack 4
+    $text = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates eveniet aliquid odit quasi corrupti minima voluptatum. Cumque reiciendis, eligendi, omnis illo necessitatibus provident, nihil sequi fuga aliquam in autem molestiae?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam, consequuntur dicta aliquid alias culpa nemo dignissimos ipsa incidunt labore, accusantium dolorum! Laborum beatae reiciendis tempora adipisci asperiores aut consequuntur sapiente.";
+
+    ?>
+        <div class="lorem-text">
+            <?=$text ?>
+        </div>
+    <?php
+    
+    $phrases = explode(".", $text);
+    echo '<ol>';
+    // Stampo le singole frasi
+    foreach($phrases as $phrase){
+        echo '<li type="1">'.$phrase.'</li>';
+    }
+    echo '</ol>';
 ?>
 <!DOCTYPE html>
 <html lang="en">
