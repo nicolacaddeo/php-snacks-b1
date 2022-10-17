@@ -122,7 +122,8 @@ if ((filter_var($mail, FILTER_VALIDATE_EMAIL)) && (strlen($name) > 3) && (is_num
 <hr>
 <?php
     # Snack 4
-    $text = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates eveniet aliquid odit quasi corrupti minima voluptatum. Cumque reiciendis, eligendi, omnis illo necessitatibus provident, nihil sequi fuga aliquam in autem molestiae?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam, consequuntur dicta aliquid alias culpa nemo dignissimos ipsa incidunt labore, accusantium dolorum! Laborum beatae reiciendis tempora adipisci asperiores aut consequuntur sapiente.";
+    echo '<h1>'.'Snack #4:'.'</h1>';
+    $text = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates eveniet aliquid odit quasi corrupti minima voluptatum. Cumque reiciendis, eligendi, omnis illo necessitatibus provident, nihil sequi fuga aliquam in autem molestiae?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam, consequuntur dicta aliquid alias culpa nemo dignissimos ipsa incidunt labore, accusantium dolorum! Laborum beatae reiciendis tempora adipisci asperiores aut consequuntur sapiente";
 
     ?>
         <div class="lorem-text">
@@ -137,6 +138,38 @@ if ((filter_var($mail, FILTER_VALIDATE_EMAIL)) && (strlen($name) > 3) && (is_num
         echo '<li type="1">'.$phrase.'</li>';
     }
     echo '</ol>';
+?>
+<hr>
+<?php
+    # Snack 5
+    echo '<h1>'.'Snack #5:'.'</h1>';
+    $students = 
+    [
+        [
+            'name' => 'Nicola',
+            'lastName' => 'Caddeo',
+            'votes' => [2, 5, 4, 6]
+        ],
+        [
+            'name' => 'Emiliana',
+            'lastName' => 'Mocci',
+            'votes' => [7, 8, 6, 7, 10]
+        ],
+        [
+            'name' => 'Mattia',
+            'lastName' => 'Saba',
+            'votes' => [4, 6, 7, 5]
+        ]
+    ];
+   
+    foreach($students as $student) {
+        $voteAverage = array_sum($student["votes"]) / count($student["votes"]);
+        ?>
+            <div class="votes">
+                <?= $student["name"] ?>  <?= $student["lastName"] ?> => (Media voti: <?= $voteAverage ?>)
+            </div>
+        <?php
+    }      
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -155,3 +188,4 @@ if ((filter_var($mail, FILTER_VALIDATE_EMAIL)) && (strlen($name) > 3) && (is_num
         
     </body>
 </html>
+        
