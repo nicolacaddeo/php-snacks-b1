@@ -27,10 +27,10 @@
                 <?=$matches[$i]['homeTeam'] ?> - <?=$matches[$i]['visitingTeam']?> | <?= $matches[$i]['homeTeamPoints']?> - <?=$matches[$i]['visitingTeamPoints']?>
             </div>
         <?php
-    }   
+    }
     
 ?>
-
+<hr>
 <?php
 # Snack 2
    
@@ -62,7 +62,66 @@ if ((filter_var($mail, FILTER_VALIDATE_EMAIL)) && (strlen($name) > 3) && (is_num
     <?php
 }
 ?>
-    
+<hr>
+<?php
+    #Snack 3
+    echo '<h1>'.'Snack #3:'.'</h1>';
+    $posts = [
+        '10/01/2019' => [
+            [
+                'title' => 'Post 1',
+                'author' => 'Michele Papagni',
+                'text' => 'Testo post 1'
+            ],
+            [
+                'title' => 'Post 2',
+                'author' => 'Michele Papagni',
+                'text' => 'Testo post 2'
+            ],
+        ],
+        '10/02/2019' => [
+            [
+                'title' => 'Post 3',
+                'author' => 'Michele Papagni',
+                'text' => 'Testo post 3'
+            ]
+        ],
+        '15/05/2019' => [
+            [
+                'title' => 'Post 4',
+                'author' => 'Michele Papagni',
+                'text' => 'Testo post 4'
+            ],
+            [
+                'title' => 'Post 5',
+                'author' => 'Michele Papagni',
+                'text' => 'Testo post 5'
+            ],
+            [
+                'title' => 'Post 6',
+                'author' => 'Michele Papagni',
+                'text' => 'Testo post 6'
+            ]
+        ],
+    ];
+    foreach($posts as $key => $value) {
+        ?>
+            <div><?=$key ?></div>
+        <?php
+        foreach($value as $post => $valueKey) {
+            ?>
+            <div><?=$valueKey["title"] ?></div>
+            <div><?=$valueKey["author"] ?></div>
+            <div><?=$valueKey["text"] ?></div>
+        <?php
+        }
+        
+    }
+?>
+<hr>
+<?php
+    # Snack 4
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
